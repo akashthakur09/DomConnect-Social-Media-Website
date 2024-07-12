@@ -9,12 +9,6 @@ const validateRegisterInput = require("../../validation/registeration");
 // Load User model
 const User = require("../../Schema/User");
 
-<<<<<<< HEAD
-=======
-// @route POST api/users/register
-// @desc Register user
-// @access Public
->>>>>>> 9a4abe8a2d5dfee95913f4db632c5b15fc8850db
 const RegisterControllers = ((req,res)=>{
 
     // Form validation

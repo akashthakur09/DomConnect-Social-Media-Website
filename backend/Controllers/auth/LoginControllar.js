@@ -5,12 +5,6 @@ const keys = require('../../config/key');
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
 
-<<<<<<< HEAD
-=======
-// @route POST api/users/login
-// @desc Login user and return JWT token
-// @access Public
->>>>>>> 9a4abe8a2d5dfee95913f4db632c5b15fc8850db
 const LoginControllers =  ((req, res)=>{
     console.log(req.user)
   // Form validation
