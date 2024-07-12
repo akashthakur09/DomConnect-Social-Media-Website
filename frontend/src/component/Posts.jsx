@@ -119,11 +119,7 @@ const handleKeyDown = (event) => {
   }
   return (
     <div>
-<<<<<<< HEAD
   <section className="posts border border_radius mt-3  overflow-hidden p-0 white border position-relative">
-=======
-  <section className="posts border border_radius border-secondary mt-3  overflow-hidden p-0 white border position-relative">
->>>>>>> 9a4abe8a2d5dfee95913f4db632c5b15fc8850db
         {props.post.userDetails.id==user1.id ? <i className="fa-regular fa-trash-can position-absolute pt-4 fs-5 trash" onClick={deletePost}/>:null}
 
   <div className="name d-flex pl-3 pt-3">
@@ -159,11 +155,7 @@ const handleKeyDown = (event) => {
   <div className=" d-flex justify-content-between p-3 align-items-center border-bottom ">
     <div className="d-flex ">
       <div className="d-flex me-5">
-<<<<<<< HEAD
         {!values.like ? <i onClick={clickLike} className="fa-regular me-2  fs-2 fa-heart"></i>
-=======
-        {!values.like ? <i onClick={clickLike} class="fa-regular me-2  fs-2 fa-heart"></i>
->>>>>>> 9a4abe8a2d5dfee95913f4db632c5b15fc8850db
         :<i onClick={clickLike} className="fa-solid fa-heart fs-2 heart me-2" />}
         <h5>{values.likes}</h5>
       </div>

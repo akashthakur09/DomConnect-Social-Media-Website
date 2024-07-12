@@ -73,11 +73,7 @@ const HomePage = () => {
   };
 
   return (
-<<<<<<< HEAD
     <div style={{ backgroundColor: "#F1F1F2" }}>
-=======
-    <div style={{ backgroundColor: "#fafafa " }}>
->>>>>>> 9a4abe8a2d5dfee95913f4db632c5b15fc8850db
       {/*---------------------------------------------------------navbar----------------------------------------------------------*/}
       <NavBar />
 

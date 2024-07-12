@@ -13,11 +13,7 @@ const nav = useNavigate();
  useEffect(()=>{
     if(localStorage.getItem("userInfo1"))
     {
-<<<<<<< HEAD
          nav('/home')
-=======
-         nav('/s')
->>>>>>> 9a4abe8a2d5dfee95913f4db632c5b15fc8850db
     }
   },[history])
   const [data,setData] = useState({})
@@ -74,23 +70,12 @@ const nav = useNavigate();
   }
 
   return (
-<<<<<<< HEAD
 <div className="container mt-5 mainBox">
   <h1>Register</h1>
   <PulseLoader  color={color} loading={loading} size={15} />
 
         <div className="card-body">
           <form className='form'>
-=======
-<div className="container mt-5">
-  <h1>Register</h1>
-  <PulseLoader  color={color} loading={loading} size={15} />
-  <div className="row">
-    <div className="col-sm-8">
-      <div className="card">
-        <div className="card-body">
-          <form>
->>>>>>> 9a4abe8a2d5dfee95913f4db632c5b15fc8850db
            <div className="form-group">
               <label htmlFor="name">Name</label>
               <input onChange={handleChange} type="name" className="form-control" name="name"/>
@@ -107,7 +92,6 @@ const nav = useNavigate();
               <label htmlFor="password">Confirm PassWord</label>
               <input onChange={handleChange} type="password" className="form-control" name="password2"/>
               <p>
-<<<<<<< HEAD
              <p style={{color:"#1995AD"}}> Already have an Account! <Link to="/login">Log In</Link></p>
             </p>
             </div>
@@ -116,19 +100,6 @@ const nav = useNavigate();
 
         </div>
       
-=======
-             <Link to="/login">Have an acount Login</Link>
-            </p>
-            </div>
-            <button onClick={handleClick} className="btn btn-dark">Register</button>
-          </form>
-
-        </div>
-      </div>
-    </div>
-
-  </div>
->>>>>>> 9a4abe8a2d5dfee95913f4db632c5b15fc8850db
 </div>
   )
 }

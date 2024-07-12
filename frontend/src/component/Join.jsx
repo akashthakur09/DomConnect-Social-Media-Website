@@ -1,5 +1,4 @@
 import React from "react";
-<<<<<<< HEAD
 import auth from "./../auth/auth-help";
 import jwt1 from "jwt-decode"; 
 import { getSender } from "../config/chatLogic";
@@ -9,67 +8,25 @@ import "./chat.css";
 import { io } from "socket.io-client";
 import Menu from "@mui/material/Menu";
 import GridLoader from "react-spinners/GridLoader";
-=======
-// import Post from "./Post";
-// import Posts from "./Posts";
-import auth from "./../auth/auth-help";
-import jwt1 from "jwt-decode"; // import dependency
-import { getSender } from "../config/chatLogic";
-// import Avatar from "@mui/material/Avatar";
-import { useRef } from "react";
-import { useEffect } from "react";
-// import Tooltip from "@mui/material/Tooltip";
-import "./chat.css";
-import { io } from "socket.io-client";
-// import IconButton from "@mui/material/IconButton";
-// import Button from "@mui/material/Button";
-import Menu from "@mui/material/Menu";
-import GridLoader from "react-spinners/GridLoader";
-// import SendIcon from "@mui/icons-material/Send";
->>>>>>> 9a4abe8a2d5dfee95913f4db632c5b15fc8850db
 import MenuItem from "@mui/material/MenuItem";
 import Fade from "@mui/material/Fade";
 import Badge from "@mui/material/Badge";
 import MailIcon from "@mui/icons-material/Mail";
-<<<<<<< HEAD
 import { searchuser } from "../api/api-post";
 import { getSenderFull } from "../config/chatLogic";
-=======
-// import { Typography } from "@mui/material";
-import { searchuser } from "../api/api-post";
-import { getSenderFull } from "../config/chatLogic";
-// import FindPeople from "./FindPeople";
->>>>>>> 9a4abe8a2d5dfee95913f4db632c5b15fc8850db
 import Box from "@mui/material/Box";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { getChat } from "../api/api-post";
 import { setMessage } from "../api/api-post";
 import { fetchChats } from "../api/api-post";
-<<<<<<< HEAD
-=======
-// import BounceLoader from "react-spinners/BounceLoader";
-// import MoonLoader from "react-spinners/MoonLoader";
->>>>>>> 9a4abe8a2d5dfee95913f4db632c5b15fc8850db
 import TextField from "@mui/material/TextField";
 import CircularProgress from "@mui/material/CircularProgress";
 import { getMessage } from "../api/api-post";
 import Stack from "@mui/material/Stack";
-<<<<<<< HEAD
 import Autocomplete from "@mui/material/Autocomplete";
 import { isSameSenderMargin, isSameUser } from "../config/chatLogic";
 import "./profile.css";
-=======
-// import DarkModeIcon from "@mui/icons-material/DarkMode";
-import Autocomplete from "@mui/material/Autocomplete";
-// import { toast } from "react-toastify";
-import {
-  // isLastMessage,
-  // isSameSender,
-  isSameSenderMargin,
-  isSameUser,
-} from "../config/chatLogic";
->>>>>>> 9a4abe8a2d5dfee95913f4db632c5b15fc8850db
 
 var socket;
 var selectedChatCompare;
@@ -302,17 +259,10 @@ const Join = () => {
   };
 
   const handleKeyDown = (event) => {
-<<<<<<< HEAD
     if (event.key === "Enter") {
       PostMessage();
     }
   };
-=======
-    if (event.key === 'Enter') {
-      PostMessage();
-    }
-  }
->>>>>>> 9a4abe8a2d5dfee95913f4db632c5b15fc8850db
   useEffect(scrollToBottom, [messages]);
   return (
     <div>
@@ -326,7 +276,6 @@ const Join = () => {
               className="justify-content-between border p-3  d-flex align-items-start grey"
               style={{ backgroundColor: `${Color3}`, color: `${TextColor}` }}
             >
-<<<<<<< HEAD
               <h5
                 className="font-weight-bold ms-3 mt-1"
                 onClick={() => {
@@ -336,14 +285,6 @@ const Join = () => {
               >
                 DomConnect
               </h5>
-=======
-              <h5 className="font-weight-bold ms-3 mt-1"
-                onClick={() => {
-                  navigate("/");
-                }}
-                style={{cursor:"pointer"}}
-              >DomConnect</h5>
->>>>>>> 9a4abe8a2d5dfee95913f4db632c5b15fc8850db
 
               <div className="rounded input-group m-0 ps-3 pe-5">
                 <Stack spacing={1} sx={{ width: 100 }}>
@@ -439,7 +380,6 @@ const Join = () => {
                     <MenuItem onClick={handleClose}>No Message</MenuItem>
                   ) : (
                     <div>
-<<<<<<< HEAD
                       {notification.map((notify) => (
                         <MenuItem
                           key={notify._id}
@@ -449,23 +389,12 @@ const Join = () => {
                           {getSender(user1, notify.chat.users)}
                         </MenuItem>
                       ))}
-=======
-                      {notification.map((notify) => {
-                        return (
-                          <MenuItem onClick={() => handleClose1(notify)}>
-                            "New Message from : "
-                            {getSender(user1, notify.chat.users)}
-                          </MenuItem>
-                        );
-                      })}
->>>>>>> 9a4abe8a2d5dfee95913f4db632c5b15fc8850db
                     </div>
                   )}
                 </Menu>
               </div>
             </div>
             <div className="justify-content-center scroll overflow-auto px-3 mt-2">
-<<<<<<< HEAD
               <div className=" mb-2 modeChangebtn">
                 <i
                   className={"btn btn-dark mb-1 "}
@@ -535,90 +464,13 @@ const Join = () => {
                               hour: "2-digit",
                               minute: "2-digit",
                             })}
-=======
-            <div className=" mb-2">
-              <i
-                className={"fa fa-moon-o btn btn-dark mb-1 "}
-                onClick={() => change("dark")}
-              >
-                dark
-              </i>
-              <button
-                className={"fa fa-moon-o btn btn-light mb-1"}
-                onClick={() => change("light")}
-              >
-                light
-              </button>
-              </div>
-              {chats.map((chat) => {
-                return (
-                  <div>
-                  {chat.latestMessage &&
-                  <div
-                    className="d-flex text-white align-items-center justify-content-between px-3 py-1 hovering shadow-sm  mb-1 
-              border-radius"
-                    onClick={() => {
-                      Setloading1(true);
-                      setTimeout(function () {
-                        Setloading1(false);
-                        setSelectChat(true);
-                        setValue1(getSenderFull(user1, chat.users));
-                        setChat(chat);
-                      }, 700);
-                    }}
-                    style={{
-                      backgroundColor: `${ChatColor}`,
-                    }}
-                  >
-                    <div className="d-flex align-items-center">
-                      <img
-                        src={getSenderFull(user1, chat.users).image}
-                        alt=""
-                        className="rounded-circle me-3"
-                        width="50px"
-                        height="50px"
-                      />
-                      <div className="mt-3">
-                        <h6
-                          style={{ color: `${TextColor}` }}
-                          className="m-0 text-lg-left font-weight-bold"
-                        >
-                          {getSender(user1, chat.users)}
-                        </h6>
-                        {chat.latestMessage ? (
-                          <p style={{ color: `${STextColor}` }}>
-                            {chat.latestMessage.content}
->>>>>>> 9a4abe8a2d5dfee95913f4db632c5b15fc8850db
                           </p>
                         ) : null}
                       </div>
                     </div>
-<<<<<<< HEAD
                   )}
                 </div>
               ))}
-=======
-                    <div className="">
-                      {chat.latestMessage ? (
-                        <p
-                          className="m-0 mb-2"
-                          style={{ color: `${STextColor}` }}
-                        >
-                          {new Date(
-                            chat.latestMessage.createdAt
-                          ).toLocaleTimeString("en-US", {
-                            // en-US can be set to 'default' to use user's browser settings
-                            hour: "2-digit",
-                            minute: "2-digit",
-                          })}
-                        </p>
-                      ) : null}
-                    </div>
-                  </div>}
-                  </div>
-                );
-              })}
->>>>>>> 9a4abe8a2d5dfee95913f4db632c5b15fc8850db
             </div>
           </div>
           {selectChat ? (
@@ -712,11 +564,7 @@ const Join = () => {
                 <input
                   style={{
                     backgroundColor: `${Color4}`,
-<<<<<<< HEAD
                     color: `${TextColor}`,
-=======
-                    color:`${TextColor}`
->>>>>>> 9a4abe8a2d5dfee95913f4db632c5b15fc8850db
                   }}
                   value={newMessage}
                   onChange={typingHandler}

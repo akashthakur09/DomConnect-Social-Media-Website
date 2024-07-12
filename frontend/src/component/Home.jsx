@@ -9,11 +9,7 @@ const nav = useNavigate();
  useEffect(()=>{
     if(localStorage.getItem("userInfo1"))
     {
-<<<<<<< HEAD
          nav('/home')
-=======
-         nav('/s')
->>>>>>> 9a4abe8a2d5dfee95913f4db632c5b15fc8850db
     }
   },[history])
 
