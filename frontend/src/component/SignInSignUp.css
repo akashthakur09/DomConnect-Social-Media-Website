@@ -1,0 +1,25 @@
+.mainBox{
+    background-color: #F1F1F2;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    box-shadow:  10px 10px 21px #404041,
+             -10px -10px 21px #e4e7ea;
+    /* text-align: center; */
+}
+.card-body{
+    width: 80%;
+}
+.login-btn{
+    padding: 5px 30px;
+    background-color: #00b4d8;
+    border: navajowhite;
+    border-radius: 4px;
+    color: white;
+}
+.login-btn:hover{
+    background-color: #02a1c1;
+}
